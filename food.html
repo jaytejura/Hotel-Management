@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Indian Dining & Room Service | HotelHub AI</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/food.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-buildings-fill"></i>
+        HotelHub AI
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link active" href="food.html">Dining / Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="dashboard.html" class="login-btn">
+            <i class="bi bi-person-circle"></i>
+            Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="food-hero">
+    <div class="container">
+      <h1>Royal Indian Dining & Room Service</h1>
+      <p>Explore over 1,000+ authentic Indian culinary delicacies from across all 14 regions of India, prepared fresh by our master chefs.</p>
+      
+      <div class="food-stats-badges">
+        <span class="food-stat-pill"><i class="bi bi-fire"></i> 1,000+ Dishes</span>
+        <span class="food-stat-pill"><i class="bi bi-geo-alt-fill"></i> 14 Regional Cuisines</span>
+        <span class="food-stat-pill"><i class="bi bi-check-circle-fill"></i> 100% Authentic Ingredients</span>
+        <span class="food-stat-pill"><i class="bi bi-clock-history"></i> 24/7 Room Delivery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Pills Sticky Header -->
+  <div class="category-scroll-wrapper">
+    <div class="container">
+      <div class="category-pills">
+        <button class="cat-pill-btn active" data-category="All">All Categories (1000+)</button>
+        <button class="cat-pill-btn" data-category="Starters & Appetizers">Starters & Appetizers</button>
+        <button class="cat-pill-btn" data-category="Main Course - Veg">Main Course - Veg</button>
+        <button class="cat-pill-btn" data-category="Main Course - Non-Veg">Main Course - Non-Veg</button>
+        <button class="cat-pill-btn" data-category="Dal & Lentils">Dal & Lentils</button>
+        <button class="cat-pill-btn" data-category="Biryani & Rice">Biryani & Rice</button>
+        <button class="cat-pill-btn" data-category="Indian Breads">Indian Breads</button>
+        <button class="cat-pill-btn" data-category="South Indian Specialties">South Indian Specialties</button>
+        <button class="cat-pill-btn" data-category="Regional & Street Food">Regional & Street Food</button>
+        <button class="cat-pill-btn" data-category="Sweets & Desserts">Sweets & Desserts</button>
+        <button class="cat-pill-btn" data-category="Beverages & Drinks">Beverages & Drinks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content & Filter Toolbar -->
+  <main class="container my-4">
+    <div class="filter-toolbar">
+      <div class="row g-3 align-items-center">
+        <!-- Live Search -->
+        <div class="col-lg-4 col-md-6">
+          <div class="search-box-group">
+            <i class="bi bi-search"></i>
+            <input type="text" id="foodSearchInput" class="form-control search-input" placeholder="Search 1000+ dishes (e.g. Paneer, Biryani, Dosa)...">
+          </div>
+        </div>
+
+        <!-- Dietary Toggles -->
+        <div class="col-lg-3 col-md-6 d-flex gap-2">
+          <button type="button" class="diet-toggle-btn w-100 justify-content-center" data-diet="veg">
+            <span class="diet-indicator veg"></span> Veg
+          </button>
+          <button type="button" class="diet-toggle-btn w-100 justify-content-center" data-diet="non-veg">
+            <span class="diet-indicator non-veg"></span> Non-Veg
+          </button>
+          <button type="button" class="diet-toggle-btn w-100 justify-content-center" data-diet="jain">
+            <span class="diet-indicator jain"></span> Jain
+          </button>
+        </div>
+
+        <!-- Region Dropdown -->
+        <div class="col-lg-2 col-md-4">
+          <select id="regionSelect" class="form-select search-input">
+            <option value="All">All Regions</option>
+            <option value="North Indian">North Indian</option>
+            <option value="South Indian">South Indian</option>
+            <option value="East Indian">East Indian</option>
+            <option value="West Indian">West Indian</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="Kashmiri">Kashmiri</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Rajasthani">Rajasthani</option>
+            <option value="Maharashtrian">Maharashtrian</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Hyderabadi">Hyderabadi</option>
+            <option value="Goan">Goan</option>
+            <option value="Chettinad">Chettinad</option>
+          </select>
+        </div>
+
+        <!-- Spice Dropdown -->
+        <div class="col-lg-1 col-md-4">
+          <select id="spiceSelect" class="form-select search-input">
+            <option value="All">Spice</option>
+            <option value="Mild">Mild 🌶️</option>
+            <option value="Medium">Medium 🌶️🌶️</option>
+            <option value="Spicy">Spicy 🌶️🌶️🌶️</option>
+          </select>
+        </div>
+
+        <!-- Sort Dropdown -->
+        <div class="col-lg-2 col-md-4">
+          <select id="sortSelect" class="form-select search-input">
+            <option value="rating_desc">Top Rated ★</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="name_asc">Name A-Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Summary Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h6 id="resultsSummaryText" class="text-muted mb-0 font-weight-medium">Loading dishes...</h6>
+    </div>
+
+    <!-- Food Cards Grid -->
+    <div id="foodGrid" class="food-grid">
+      <!-- Dynamic JS Content -->
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="paginationWrapper" class="pagination-container">
+      <!-- Dynamic JS Content -->
+    </div>
+  </main>
+
+  <!-- Floating Room Service Order Cart Button -->
+  <button id="floatingCartBtn" class="floating-cart-btn">
+    <i class="bi bi-cart-fill"></i>
+    <span>Room Order</span>
+    <span id="cartBadgeCount" class="cart-badge-count">0</span>
+  </button>
+
+  <!-- Room Service Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header cart-drawer-header">
+          <h5 class="modal-title fw-bold">
+            <i class="bi bi-cup-hot-fill text-warning me-2"></i> Room Service Cart
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        
+        <form id="placeOrderForm">
+          <div class="modal-body">
+            <div id="cartItemsList" class="mb-4">
+              <!-- Cart Items rendered by JS -->
+            </div>
+            
+            <div class="card bg-light p-3 border-0 rounded-3 mb-3">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Subtotal</span>
+                <span id="cartTotalPrice" class="fw-bold fs-5 text-dark">₹0</span>
+              </div>
+              <div class="d-flex justify-content-between small text-success">
+                <span>Room Delivery</span>
+                <span>FREE (Complimentary)</span>
+              </div>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-6">
+                <label class="form-label small fw-bold text-muted">Room Number *</label>
+                <input type="text" id="roomNumberInput" class="form-control" placeholder="e.g. 402" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-bold text-muted">Guest Name *</label>
+                <input type="text" id="guestNameInput" class="form-control" placeholder="e.g. Rahul Sharma" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-warning fw-bold text-dark px-4">
+              <i class="bi bi-check-circle-fill me-1"></i> Place Room Order
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h2 class="footer-logo">
+            <i class="bi bi-buildings-fill"></i>
+            HotelHub AI
+          </h2>
+          <p>
+            Experience authentic Indian hospitality & 1,000+ traditional dishes served fresh to your luxury suite.
+          </p>
+        </div>
+        
+        <div class="col-lg-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="food.html">Dining / Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Rajkot, Gujarat</p>
+          <p><i class="bi bi-envelope-fill"></i> dining@hotelhubai.com</p>
+          <p><i class="bi bi-telephone-fill"></i> +91 98765 43210</p>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p>© 2026 HotelHub AI | All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Food Dataset & Logic -->
+  <script src="js/indian_food_data.js"></script>
+  <script src="js/food.js"></script>
+</body>
+
+</html>
