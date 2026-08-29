@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | HotelHub AI</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="bi bi-buildings-fill"></i>
+HotelHub AI
+</a>
+
+<div class="d-flex align-items-center gap-3">
+
+<button id="themeBtn" class="theme-btn">
+<i class="bi bi-moon-stars-fill"></i>
+</button>
+
+<button class="notification-btn">
+<i class="bi bi-bell-fill"></i>
+<span class="badge">3</span>
+</button>
+
+<div class="dropdown">
+
+<a class="profile-btn dropdown-toggle"
+data-bs-toggle="dropdown">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<span>Jay</span>
+
+</a>
+
+<ul class="dropdown-menu dropdown-menu-end">
+
+<li><a class="dropdown-item" href="#">
+<i class="bi bi-person"></i> Profile
+</a></li>
+
+<li><a class="dropdown-item" href="#">
+<i class="bi bi-gear"></i> Settings
+</a></li>
+
+<li><hr class="dropdown-divider"></li>
+
+<li><a class="dropdown-item text-danger" href="#">
+<i class="bi bi-box-arrow-right"></i> Logout
+</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="dashboard-header">
+
+<div class="container">
+
+<h1>Welcome Back, Jay 👋</h1>
+
+<p>Manage your bookings and discover amazing hotels.</p>
+
+</div>
+
+</section>
+
+<!-- Stats -->
+
+<section class="container py-5">
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+<div class="dashboard-card">
+<i class="bi bi-calendar-check"></i>
+<h2>08</h2>
+<p>Total Bookings</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="dashboard-card">
+<i class="bi bi-building"></i>
+<h2>02</h2>
+<p>Upcoming Stays</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="dashboard-card">
+<i class="bi bi-heart-fill"></i>
+<h2>12</h2>
+<p>Wishlist</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="dashboard-card">
+<i class="bi bi-star-fill"></i>
+<h2>950</h2>
+<p>Reward Points</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Quick Actions -->
+
+<section class="container">
+
+<h3 class="section-title">Quick Actions</h3>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+<a href="#" class="action-card">
+<i class="bi bi-search"></i>
+<h5>Book Hotel</h5>
+</a>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<a href="#" class="action-card">
+<i class="bi bi-journal-bookmark"></i>
+<h5>My Bookings</h5>
+</a>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<a href="#" class="action-card">
+<i class="bi bi-person"></i>
+<h5>Edit Profile</h5>
+</a>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<a href="#" class="action-card">
+<i class="bi bi-headset"></i>
+<h5>Support</h5>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- Upcoming Booking -->
+
+<section class="container py-5">
+
+<h3 class="section-title">Upcoming Booking</h3>
+
+<div class="booking-card">
+
+<div class="row align-items-center">
+
+<div class="col-lg-4">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" class="img-fluid rounded">
+</div>
+
+<div class="col-lg-8">
+
+<h3>Grand Palace Hotel</h3>
+
+<p><i class="bi bi-geo-alt-fill"></i> Mumbai, India</p>
+
+<div class="row mt-4">
+
+<div class="col-md-4">
+<strong>Check In</strong>
+<p>15 Aug 2026</p>
+</div>
+
+<div class="col-md-4">
+<strong>Check Out</strong>
+<p>18 Aug 2026</p>
+</div>
+
+<div class="col-md-4">
+<strong>Status</strong>
+<p class="text-success">Confirmed</p>
+</div>
+
+</div>
+
+<button class="btn btn-warning mt-3">
+View Booking
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Recommended Hotels -->
+
+<section class="container py-5">
+
+<h3 class="section-title">Recommended Hotels</h3>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="hotel-card">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800" class="img-fluid">
+
+<div class="hotel-content">
+
+<h4>Ocean View Resort</h4>
+
+<p>⭐⭐⭐⭐⭐ Goa</p>
+
+<h5>₹6,299 / Night</h5>
+
+<button class="btn btn-warning w-100">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="hotel-card">
+
+<img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800" class="img-fluid">
+
+<div class="hotel-content">
+
+<h4>Mountain Luxury</h4>
+
+<p>⭐⭐⭐⭐⭐ Manali</p>
+
+<h5>₹7,499 / Night</h5>
+
+<button class="btn btn-warning w-100">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="hotel-card">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800" class="img-fluid">
+
+<div class="hotel-content">
+
+<h4>Royal Suites</h4>
+
+<p>⭐⭐⭐⭐⭐ Jaipur</p>
+
+<h5>₹5,899 / Night</h5>
+
+<button class="btn btn-warning w-100">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Booking History -->
+
+<section class="container py-5">
+
+<h3 class="section-title">Recent Booking History</h3>
+
+<div class="table-responsive">
+
+<table class="table table-dark table-hover align-middle">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Hotel</th>
+
+<th>Date</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#HH1021</td>
+
+<td>Grand Palace</td>
+
+<td>15 Aug 2026</td>
+
+<td>₹14,997</td>
+
+<td><span class="badge bg-success">Confirmed</span></td>
+
+</tr>
+
+<tr>
+
+<td>#HH1019</td>
+
+<td>Ocean View</td>
+
+<td>20 Jul 2026</td>
+
+<td>₹12,598</td>
+
+<td><span class="badge bg-warning">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>#HH1012</td>
+
+<td>Mountain Luxury</td>
+
+<td>10 Jun 2026</td>
+
+<td>₹7,499</td>
+
+<td><span class="badge bg-danger">Cancelled</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<div class="container text-center">
+
+<h3>HotelHub AI</h3>
+
+<p>Luxury Hotel Booking Platform</p>
+
+<p>© 2026 HotelHub AI. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+                </html>
